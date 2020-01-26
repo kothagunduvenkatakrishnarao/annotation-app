@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h2>Fill the details</h2>
+    <!-- <div id="blankImagediv">
+
+    <canvas id="canvas" ></canvas>
+    </div> -->
+    {% csrf_token %}
+    <form method="POST" enctype="text/plain" onsubmit="return false;">
+        
+        <input type="file" name="file" id="file_input">
+        <canvas id= "canvas"></canvas><br><br>
+        <!-- <img id="img_pic" src="#" alt="your image"> -->
+        License Number 
+        <input type="text" id="liscensenumber" name="liscensenumber"><br><br>
+        Name
+        <input type="text" id="company" name="company"><br><br>
+        Car Model
+        <input type="text" id="carmodel" name="carmodel"><br><br>
+        Color
+        <input type="text" id="colour" name="colour"><br><br>
+        <button type="submit" onclick="submit_annotation(this)" class="btn btn-success">Save</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

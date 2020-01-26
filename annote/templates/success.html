@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <title>index</title>
+</head>
+<body>
+    <!-- check fixing sixe or not -->
+    {% csrf_token %}
+    <p>Your Liscense number: {{lisenceNum}}</p>
+    <input type="hidden" id="linumid" name="variable" value="{{ lisenceNum }}">
+    <input type="hidden" id="filenameid" name="variable" value="{{ filename }}">
+    <div id="blankImagediv">
+    <!-- <img id="image"> -->
+    <canvas id="canvas" ></canvas>
+    <script type="text/javascript" src="{% static 'script2.js' %}"></script>
+    </div>
+</body>
+</html>
+
+
+
+
+
+ <!-- <img src="/media/media/{{filename}}" id="canvas"> -->
